@@ -64,6 +64,12 @@ a {
   justify-content: center;
   width: 100%;
   z-index: 5;
+  top: -120px;
+  transition: top 0.2s ease;
+}
+
+.headerBox.show {
+  top: 0;
 }
 
 .header {

@@ -4,9 +4,10 @@ import { NavLink, Link } from "react-router-dom";
 import '../App.css'
 
 function Header(){
+
     return(
-        <div className="headerBox">
-            <div className="header">
+        <div className="headerBox" >
+            <div className="header" >
                 <div className="headerLogo">
                     <Link to='/'>
                         <img src={process.env.PUBLIC_URL + 'logo.png'} className="logo" alt="logo" loading="lazy" />

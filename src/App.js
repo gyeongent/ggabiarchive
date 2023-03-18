@@ -8,9 +8,7 @@ import NotFound from './Components/NotFound';
 import Quiz from './Components/Quiz';
 
 function App() {
-
   const location = useLocation();
-
   const header = document.getElementsByClassName('headerBox');
 
   useEffect(() => {
@@ -18,6 +16,40 @@ function App() {
       header[0].style.display = 'none';
     } else if(location.pathname !== "/404"){
       header[0].style.display = 'block';
+    }
+  })
+
+  useEffect(() => {
+    var lastScrollTop = 0;
+    var delta = 7;
+    const header = document.getElementsByClassName('headerBox');
+    var headerHeight = header[0].offsetHeight;
+    var didScroll;
+
+    window.onscroll = function(e){
+      didScroll = true;
+    }
+
+    setInterval(function(){
+      if(didScroll){
+        hasScrolled();
+        didScroll = false;
+      }
+    }, 250)
+
+    function hasScrolled(){
+      var nowScrollTop = window.scrollY;
+      if(Math.abs(lastScrollTop - nowScrollTop) <= delta){
+        return;
+      }
+      if(nowScrollTop > lastScrollTop && nowScrollTop > headerHeight){
+        header[0].classList.remove('show');
+      } else {
+        if(nowScrollTop + window.innerHeight < document.body.offsetHeight){
+          header[0].classList.add('show');
+        }
+      }
+      lastScrollTop = nowScrollTop
     }
   })
 
