@@ -2,7 +2,7 @@ import React from "react";
 
 function Quiz(){
     return(
-        <div>
+        <div className="container">
             퀴즈 페이지
         </div>
     )

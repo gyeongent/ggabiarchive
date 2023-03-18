@@ -9,7 +9,7 @@ function Header(){
             <div className="header">
                 <div className="headerLogo">
                     <Link to='/'>
-                        로고
+                        <img src={process.env.PUBLIC_URL + 'logo.png'} className="logo" alt="logo" loading="lazy" />
                     </Link>
                 </div>
                 <div>

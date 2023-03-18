@@ -1,16 +1,22 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 import '../App.css'
 
 function NotFound(){
+
+    const navigate = useNavigate();
+
     return(
         <div className="Notfound">
-            <div>
-                잠자는 중...
+            <div className="NfImgs">
+                <img />
+            </div>
+            <div className="NfInfo">
+                자료 수집중
                 <span>
-                    <Link to="/">
-                        조용히 돌아가기
+                    <Link to={navigate(-2)}>
+                        &#xE000; 이전 페이지로 돌아가기
                     </Link>
                 </span>
             </div>
