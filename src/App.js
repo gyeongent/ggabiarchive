@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import Header from './Components/Header';
 import Main from './Components/Main';
@@ -9,13 +9,11 @@ function App() {
   return (
     <div>
     <Header />
-    <BrowserRouter>
       <Routes>
         <Route path='/' element={<Main />} />
         <Route path='/profile' element={<Profile />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
-    </BrowserRouter>
     </div>
   );
 }
