@@ -60,7 +60,7 @@ a {
 .headerBox {
   margin: 25px 0;
   display: flex;
-  position:fixed;
+  position: fixed;
   justify-content: center;
   width: 100%;
   z-index: 5;
@@ -190,4 +190,41 @@ a {
 
 .profileDesc > p {
   font-size: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+  .container {
+    padding: 15em 2em;
+    height: max-content;
+  }
+
+  .headerBox {
+    width: 0 auto;
+  }
+
+  .header {
+  }
+
+  .profile {
+    width: auto;
+    display: block;
+    min-width: auto;
+  }
+
+  .profileImg {
+    width:  auto;
+    height: 250px;
+  }
+
+  .profileTitle {
+    position: absolute;
+    top: 17vh;
+    left: 30vw;
+    color: black;
+    filter: none;
+  }
+
+  .profileDesc {
+    margin: 0;
+  }
 }
